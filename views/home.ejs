@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script
+      src="https://accounts.google.com/gsi/client"
+      onload="console.log('gsi loaded')"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+    </style>
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      #get-files {
+        height: 50px;
+        width: 200px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        border: 1px solid black;
+        background: white;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      #get-files:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi <%= name %></h1>
+    <p>Your email : <%= email %></p>
+    <p>Your photo :</p>
+    <img src="<%= photo %>" alt="" referrerpolicy="no-referrer" />
+
+    <h2>Google API OAuth</h2>
+    <button id="get-files">Show my Files</button>
+
+    <br />
+    <button id="signout" style="font-size: 1.25rem; margin: 1rem">
+      Signout
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/get-auth.js"></script>
+  </body>
+</html>

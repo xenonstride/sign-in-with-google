@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Sign In with Google</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100%;
+      }
+
+      .g-signin {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div class="g-signin">
+      <div
+        id="g_id_onload"
+        data-client_id="350261747582-qg3vsk4r3d1h58014ioeuik0abcds34s.apps.googleusercontent.com"
+        data-login_uri="http://localhost:4000/google-signin-auth"
+        data-ux_mode="redirect"
+      ></div>
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
+    </div>
+  </body>
+</html>
